@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Norse';
+    src: url(norse-bold-webfont.woff2) format('woff2'),
+        url(norse-bold-webfont.woff) format('woff');
+}
+
 body {
     height: 100vh;
     display: flex;
@@ -14,21 +20,29 @@ body {
     color: #fff;
 }
 
+form {
+    position: relative;
+    left: 38px;
+}
+
 .form-container {
     width: 800px;
     border: 2px solid rgb(255, 255, 255, .3);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
     border-radius: 6px;
-    padding: 25px 35px;
+    padding: 30px 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: transparent;
+    backdrop-filter: blur(20px);
 }
 
 .input-container {
     width: 700px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 img {
@@ -37,8 +51,9 @@ img {
 
 div > label {
     display: block;
-    width: 100%;
+    width: 280px;
     font-size: 1rem;
+    color: #99a1af;
 }
 
 .input-container > div {
@@ -57,28 +72,64 @@ label + input {
     padding: 4px 8px;
 }
 
+input:user-invalid {
+    border-color: #ff4d4d;
+    box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.5);
+}
+
+input:user-valid {
+    border-color: #00786f;
+    box-shadow: 0 4px 8px rgba(0, 90, 180, 0.3);
+}
+
 button[type='submit'] {
     margin: 20px 0 10px 0;
     width: 30%;
     padding: 15px 20px;
     border-radius: 8px;
     cursor: pointer;
+    background-color: #00786f;
+    color: #fff;
+    font-size: 1.2rem;
 }
 
-div > h1 {
+button[type='submit']:hover {
+    background-color: #005d50;
+}
+
+img + h1 {
     margin-bottom: 20px;
     vertical-align: middle;
     display: inline-block;
     position:relative;
     bottom: 15px;
     left: 10px;
+    font-family: 'Norse', sans-serif
+}
+
+button + p {
+    color: #99a1af;
 }
 
 p > a {
-    text-decoration: none;
-    color: #fff;
+    color: #8ec5ff;
 }
 
 p > a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
+
+div + p {
+    font-size: 1.5rem;
+    color: #99a1af;
+    margin-bottom: 20px;
+}
+
+/* div > img {
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 30px;
+}
+
+div > img:hover {
+    box-shadow: 0 0 15px 5px rgba(255, 204, 102, 0.8);
+} */

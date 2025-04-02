@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Project Sign-up Form</title>
+    <title>Sign up - The Odin Project</title>
 </head>
 <body>
     <div class="form-container">
         <div>
-            <img src="odin-icon-22b41941.svg" alt="odin-icon"><h1>CREATE ACCOUNT</h1>
+            <img src="odin-icon-22b41941.svg" alt="odin-icon"><h1>The Odin Project</h1>
         </div>
+        <p>Sign up, It's free!</p>
         <form action="#">     
             <div class="input-container">
                 <div>
@@ -27,7 +28,7 @@
                 </div>
                 <div>
                     <label for="phone-number">PHONE NUMBER</label>
-                    <input type="number" name="phone-number" id="phone-number">
+                    <input type="number" name="phone-number" id="phone-number" required>
                 </div>
                 <div>
                     <label for="password">PASSWORD</label>
@@ -35,10 +36,10 @@
                 </div>
                 <div>
                     <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="password" name="confirm-password" id="confirm-password">
+                    <input type="password" name="confirm-password" id="confirm-password" required>
                 </div>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">Create Account</button>
             <p>Already have an account? <a href="">Log in</a></p>
         </form>
     </div>
